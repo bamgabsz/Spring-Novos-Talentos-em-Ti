@@ -25,6 +25,8 @@ Site que cria a estrutura de um projeto utilizando o spring boot
 - Pacote src: todo o codigo da aplicação (Java, HTML, CSS, JS)
 - Pacote target: codigo compilado e gerado pelo Maven
 - Arquivo pom.sml: arquivo descritor utilizado pelo Maven pela download das dependencias e build de aplicação
+- <nomedoprojeto> Application.java - main da aplicação Java
+- Pacote controller: classes que são responsáveis por tratar as requisições HTTP enviadas para as rotas definidas por anotação
 
 #
 ## Executar a aplicação
