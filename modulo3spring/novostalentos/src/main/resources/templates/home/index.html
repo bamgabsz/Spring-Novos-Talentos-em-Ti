@@ -2,15 +2,20 @@
 <!-- TAG LIB 
      xmlns =
     -->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<head>
-
-    <title>Spring Boot</title>
-</head>
+<head th:include="layout :: head"></head>
 
 <body>
-    <p th:text="${valor}"></p>
+
+    <nav th:replace="layout :: menu"></nav>
+
+    <main class="container">
+        <p th:text="${valor}" class="btn btn-primary"></p>
+    </main>
+
+    <footer th:include="layout :: footer"></footer>
+
 </body>
 
 </html>
