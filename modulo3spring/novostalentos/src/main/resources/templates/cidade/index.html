@@ -13,20 +13,15 @@
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
-                        <th>Endereço</th>
-                        <th>Sexo</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="umCliente : ${listaClientes}">
-                        <td th:text="${umCliente.id}"></td>
-                        <td th:text="${umCliente.nome}"></td>
-                        <td th:text="${umCliente.endereco}"></td>
-                        <td th:text="${umCliente.sexo}"></td>
+                    <tr th:each="umaCidade : ${listaCidades}">
+                        <td th:text="${umaCidade.id}"></td>
+                        <td th:text="${umaCidade.nome}"></td>
                     </tr>
                 </tbody>
             </table>
-
         </main>
         <footer th:include="layout :: footer"></footer>
     </body>

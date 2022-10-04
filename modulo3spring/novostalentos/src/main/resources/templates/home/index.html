@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-<!-- TAG LIB 
-     xmlns =
-    -->
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-<head th:include="layout :: head"></head>
+    <head th:include="layout :: head"></head>
 
-<body>
-
-    <nav th:replace="layout :: menu"></nav>
-
-    <main class="container">
-        <p th:text="${valor}" class="btn btn-primary"></p>
-    </main>
-
-    <footer th:include="layout :: footer"></footer>
-
-</body>
-
+    <body>
+        <nav th:replace="layout :: menu"></nav>
+        <main class="container">
+            <!-- Aqui -->
+            <p th:text="${valor}" class="btn btn-primary"></p>  
+            <!-- <p>{{valor}}</p>-->      
+        </main>
+        <footer th:include="layout :: footer"></footer>
+    </body>
 </html>
