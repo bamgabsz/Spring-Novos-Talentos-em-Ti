@@ -19,5 +19,21 @@ public class ClienteServiceImpl
     public List<Cliente> getAll() {
         return repositorio.findAll();
     }
+
+    @Override
+    public Cliente save(Cliente cliente) {
+        return repositorio.save(cliente);
+    }
+
+    @Override
+    public Cliente findById(long id) {
+        var resultado = repositorio.findById(id);
+        if(resultado.isPresent()){
+            return resultado.get();
+        }
+        return new Cliente();
+    }
     
+
+   
 }
