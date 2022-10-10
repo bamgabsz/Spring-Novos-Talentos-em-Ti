@@ -1,6 +1,7 @@
 package br.univille.novostalentos.controller;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -40,6 +41,13 @@ public class ClienteController {
         var umCliente = service.findById(id);
 
         return new ModelAndView("cliente/form","cliente",umCliente);
+    }
+    @GetMapping("/delete/{id}")
+    public ModelAndView delete(@PathVariable("id") long id){
+
+        service.delete(id);
+
+        return new ModelAndView("redirect:/clientes");
     }
 
 
