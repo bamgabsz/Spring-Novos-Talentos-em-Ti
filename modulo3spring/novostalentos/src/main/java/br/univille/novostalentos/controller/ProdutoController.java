@@ -43,7 +43,7 @@ public class ProdutoController {
     }
 
     @GetMapping("/alterar/{id}")
-    public ModelAndView alterar(@PathVariable("id")Long id){
+    public ModelAndView alterar(@PathVariable("id") long id){
         var umProduto = service.findById(id);
         return new ModelAndView("produto/form","produto",umProduto);
     }
