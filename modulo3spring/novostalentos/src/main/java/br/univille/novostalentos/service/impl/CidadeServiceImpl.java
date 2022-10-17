@@ -31,11 +31,5 @@ public class CidadeServiceImpl implements CidadeService{
         }
         return new Cidade();
     }
-
-    @Override
-    public void delete(long id) {
-        repositorio.deleteById(id);
-        
-    }
     
 }

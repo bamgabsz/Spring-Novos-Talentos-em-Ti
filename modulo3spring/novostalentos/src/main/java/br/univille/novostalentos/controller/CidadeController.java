@@ -1,5 +1,6 @@
 package br.univille.novostalentos.controller;
 
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.univille.novostalentos.entity.Cidade;
-
+import br.univille.novostalentos.repository.CidadeRepository;
 import br.univille.novostalentos.service.CidadeService;
 
 @Controller
@@ -47,11 +48,4 @@ public class CidadeController {
                                 "cidade", umaCidade);
     }
 
-    @GetMapping("/delete/{id}")
-    public ModelAndView delete(@PathVariable("id")long id){
-
-        service.delete(id);
-
-        return new ModelAndView("redirect:/clientes");
-    }
 }
